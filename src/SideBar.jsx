@@ -23,12 +23,6 @@ const SideBar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   const { openDropdown, toggleDropdown } = useSidebar();
-  const { theme } = useTheme();
-  const logoURL = useMemo(() => {
-    return theme === "dark"
-      ? "/assets/Briqko/logo-white.png"
-      : "/assets/Briqko/logo-Black.png";
-  }, [theme]);
 
   const toggleSidebar = () => {
     setIsCollapsed((prev) => !prev);
@@ -46,11 +40,9 @@ const SideBar = () => {
         {/* Header */}
         <div className="p-5 flex items-center justify-between">
           {!isCollapsed && (
-            <img
-              src={logoURL}
-              alt="Construction ERP"
-              className="h-15 p-0 m-1"
-            />
+            <h2 className="text-blue-800 dark:text-blue-500 font-bold text-2xl">
+              Construction ERP
+            </h2>
           )}
           <Menu
             onClick={toggleSidebar}
