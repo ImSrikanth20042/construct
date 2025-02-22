@@ -46,7 +46,11 @@ const SideBar = () => {
         {/* Header */}
         <div className="p-5 flex items-center justify-between">
           {!isCollapsed && (
-            <img src={logoURL} alt="briqko logo" className="h-15 p-0 m-1" />
+            <img
+              src={logoURL}
+              alt="Construction ERP"
+              className="h-15 p-0 m-1"
+            />
           )}
           <Menu
             onClick={toggleSidebar}
